@@ -1,1 +1,125 @@
+<script>
 
+
+
+var url = "https://scratch.mit.edu/users/kaj/following/";
+var type = 'http://scratch.us.to/';
+
+switch(url.substring(24,29)) {
+
+
+
+    case "proje":
+
+        var id = url.substring(33,100);
+        id = id.substring(0, id.indexOf('/'));
+        var id2 = parseInt(id);
+        var id3 = id2.toString(36);
+        var short = type + "p" + id3;
+        break;
+
+
+
+
+    case "studi":
+        var end = url.substring(url.length-5, url.length);
+
+
+        switch (end) {
+
+            case "ents/":
+                var id = url.substring(32,100);
+                id = id.substring(0, id.indexOf('/'));
+                console.log(id);
+                var id2 = parseInt(id);
+                var id3 = id2.toString(36);
+                var short = type + "c" + id3;
+                console.log(short);
+                break;
+
+            case "vity/":
+                console.log('vity');
+                var id = url.substring(32,100);
+                id = id.substring(0, id.indexOf('/'));
+                console.log(id);
+                var id2 = parseInt(id);
+                var id3 = id2.toString(36);
+                var short = type + "a" + id3;
+                console.log(short);
+                break;
+
+            case "tors/":
+                console.log('vity');
+                var id = url.substring(32,100);
+                id = id.substring(0, id.indexOf('/'));
+                var id2 = parseInt(id);
+                var id3 = id2.toString(36);
+                var short = type + "m" + id3;
+                console.log(short);
+                break;
+
+            default:
+                var id = url.substring(32,100);
+                id = id.substring(0, id.indexOf('/'));
+                var id2 = parseInt(id);
+                var id3 = id2.toString(36);
+                var short = type + "s" + id3;
+                break;} break;
+
+
+
+
+    case "users":
+        var end = url.substring(url.length-8, url.length);
+
+
+        switch (end) {
+
+            case "rojects/":
+                var id3 = url.substring(30,100);
+                id3 = id3.substring(0, id3.indexOf('/'));
+                var short = type + "." + id3;
+                break;
+
+            case "vorites/":
+                var id3 = url.substring(30,100);
+                id3 = id3.substring(0, id3.indexOf('/'));
+                var short = type + "," + id3;
+                break;
+
+            case "llowing/":
+
+                if (url.substring(url.length-11, url.length) == '_following/') {
+                    var id3 = url.substring(30,100);
+                    id3 = id3.substring(0, id3.indexOf('/'));
+                    var short = type + ":" + id3;}
+                else {
+                    var id3 = url.substring(30,100);
+                    id3 = id3.substring(0, id3.indexOf('/'));
+                    var short = type + ";" + id3;
+                    console.log(short);} break;
+
+            case "studios/":
+                var id3 = url.substring(30,100);
+                id3 = id3.substring(0, id3.indexOf('/'));
+                var short = type + "*" + id3;
+                break;
+
+
+            case "llowers/":
+                var id3 = url.substring(30,100);
+                id3 = id3.substring(0, id3.indexOf('/'));
+                var short = type + "." + id3;
+                break;} break;
+
+
+
+
+
+}
+
+
+
+
+
+</script>
